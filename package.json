@@ -1,0 +1,18 @@
+{
+  "name": "manager_employee_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "__test__"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Hanna Munoz",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.6.3"
+  }
+}
