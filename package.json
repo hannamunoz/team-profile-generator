@@ -12,6 +12,7 @@
   "author": "Hanna Munoz",
   "license": "ISC",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^7.3.3",
     "jest": "^26.6.3"
   }

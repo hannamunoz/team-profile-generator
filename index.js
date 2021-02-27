@@ -12,7 +12,7 @@ function startPrompt() {
     inquirer.prompt([
         {
             message: "Please Enter Your Team Name: ",
-            name: teamname
+            name: "teamname"
         }
     ]).then(function (data) {
         const teamName = data.teamname
@@ -26,20 +26,20 @@ function addManager() {
     inquirer.prompt([
         {
             message: "What is the name of the team manager?",
-            name: "managerName"
+            name: "name"
         },
         {
             message: "What is the manager's email address?",
-            name: "managerEmail"
+            name: "email"
         },
         {
-            message: "What is the manager's office number?",
+            message: "What is the manager's office phone number?",
             name: "officeNumber"
         }
     ]).then(function (data) {
-        const name = data.managerName;
+        const name = data.name;
         const id = 1;
-        const email = data.managerEmail;
+        const email = data.email;
         const officeNumber = data.officeNumber;
         const teamMember = new Manager(name, id, email, officeNumber);
 
@@ -56,7 +56,7 @@ function addTeamMembers() {
             choices: ["Yes, add an engineer", "Yes, add an intern", "No, team is complete"],
             name: "memberData"
         }
-    ]).then(function (datd) {
+    ]).then(function (data) {
         switch (data.memberData) {
             case "Yes, add an engineer":
                 addEngineer();
@@ -75,21 +75,21 @@ function addEngineer() {
     inquirer.prompt([
         {
             message: "What is the engineer's name?",
-            name: "engineerName"
+            name: "name"
         },
         {
             message: "What is the engineer's email address?",
-            name: "engineerEmail"
+            name: "email"
         },
         {
             message: "What is the engineer's github?",
-            name: "engineerGithub"
+            name: "github"
         }
     ]).then(function (data) {
-        const name = this.name;
+        const name = data.name;
         const id = teamArray.length + 1;
-        const email = this.engineerEmail;
-        const github = this.engineerGithub;
+        const email = data.email;
+        const github = data.github;
         const teamMember = new Engineer(name, id, email, github);
         teamArray.push(teamMember);
         addTeamMembers();
@@ -100,21 +100,21 @@ function addIntern() {
     inquirer.prompt([
         {
             message: "What is the intern's name?",
-            name: "internName"
+            name: "name"
         },
         {
             message: "What is the intern's email?",
-            name: "internEmail"
+            name: "email"
         },
         {
             message: "What school does the intern attend?",
-            name: "internSchool"
+            name: "school"
         }
     ]).then(function (data) {
-        const name = this.internName;
+        const name = data.name;
         const id = teamArray.length + 1;
-        const email = this.internEmail;
-        const school = this.internSchool;
+        const email = data.email;
+        const school = data.school;
         const teamMember = new Intern(name, id, email, school);
         teamArray.push(teamMember);
         addTeamMembers();
@@ -126,7 +126,6 @@ function formTeam() {
 
     const webArray = [];
     const websiteHtml = `
-    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,6 +134,7 @@ function formTeam() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>${teamArray[0]}<title>
 </head>
     
@@ -157,7 +157,7 @@ function formTeam() {
             <h5 class="card-title">${teamArray[i].name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${teamArray[i].title}</h6>
             <p class="card-text">Employee ID: ${teamArray[i].id}</p>
-            <p class="card-text">Email: <a href="mailto:${teamArray.email}">${teamArray[i].email}</a></p>
+            <p class="card-text">Email: <a href="mailto:${teamArray[i].email}">${teamArray[i].email}</a></p>
         `
 
         if (teamArray[i].officeNumber) {

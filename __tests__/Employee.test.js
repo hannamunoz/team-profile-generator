@@ -1,7 +1,7 @@
 const { TestScheduler } = require("jest");
 const Employee = require("../lib/Employee");
 
-test("can set a employee name", () => {
+test("can set an employee name", () => {
     const name = "Hanna";
     const employee = new Employee(name);
 
