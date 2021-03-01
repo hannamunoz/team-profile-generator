@@ -12,5 +12,5 @@ Using the command line, use node to run the index.js file. This will bring up th
 - fs
 - Bootstrap for styling
 
-##Usage
+## Usage
 [Click here for preview video](https://drive.google.com/file/d/1HDak5B1JGElsCjiBQnyCiVTMXsg42Qqf/view?usp=sharing)
