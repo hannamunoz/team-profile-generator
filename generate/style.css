@@ -1,6 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header {
     padding : 60px;
     text-align: center;
     color: rgb(109, 151, 214);
     font-size: 20px;
+}
+
+.card {
+    background-color: rgb(26, 26, 90);
+    color: rgb(229, 231, 238);
+    box-shadow: 2px 5px 5px rgb(192, 190, 190);
+    margin: 5px;
+}
+
+.container {
+    position: absolute;
+    top: 26vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
