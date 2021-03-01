@@ -9,4 +9,8 @@ Using the command line, use node to run the index.js file. This will bring up th
 # Processes Used:
 - Jest
 - Inquirer
+- fs
+- Bootstrap for styling
 
+##Usage
+[Click here for preview video](https://drive.google.com/file/d/1HDak5B1JGElsCjiBQnyCiVTMXsg42Qqf/view?usp=sharing)
