@@ -1,4 +1,4 @@
-![Team Generator](../dist/screenshot.png)
+![Team Generator](./dist/screenshot.png)
 
 # Team Generator:
 Using the command line, you are able to generate a team layout with information for managers, engineers and interns.
